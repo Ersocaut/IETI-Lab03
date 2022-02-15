@@ -3,15 +3,15 @@ package org.ada.school.dto;
 public class UserDto
 {
     String name;
-
     String email;
-
     String lastName;
+    String password;
 
-    public UserDto(String name, String lastName, String email){
+    public UserDto(String name, String lastName, String email, String password){
         this.name = name;
         this.lastName = lastName;
         this.email = email;
+        this.password = password;
     }
 
     public String getName()
@@ -28,4 +28,6 @@ public class UserDto
     {
         return lastName;
     }
+
+    public String getPassword() { return password; }
 }

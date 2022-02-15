@@ -33,6 +33,10 @@ public class UserController
         return ResponseEntity.ok( userService.findById( id ) );
     }
 
+    @GetMapping("/{email}")
+    public ResponseEntity<User> findByEmail(@PathVariable String email){
+        return ResponseEntity.ok(userService.findByEmail(email));
+    }
 
     @PostMapping
     public ResponseEntity<User> create( @RequestBody UserDto userDto )
